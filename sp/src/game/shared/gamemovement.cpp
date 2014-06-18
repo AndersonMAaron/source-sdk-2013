@@ -1910,7 +1910,8 @@ void CGameMovement::WalkMove( void )
 	Vector dest;
 	trace_t pm;
 	Vector forward, right, up;
-
+	
+	// Head bobbing 
 	if (cl_viewbob_enabled.GetInt() == 1 && !engine->IsPaused())
 	{
 		float xoffset = sin(gpGlobals->curtime * cl_viewbob_timer.GetFloat()) * player->GetAbsVelocity().Length() * cl_viewbob_scale.GetFloat() / 100;
